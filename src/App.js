@@ -1,30 +1,30 @@
 //import PropTypes from "prop-types";
 import React from "react";
+import axios from "axios";  // fetch vs axios ?
+
+// React.Componet를 상속한 class 구현 
 class App extends React.Component{
   state = {
-    count : 0
+    isLoading : true,
+    movies: []
   };
-
-  add = ()=> {
-    // this.state.count = 1;  //  Warning :  Do not mutate state directly. Use setState()  직접 바꾸면 render 를 하지 않음. 
-    // this.setState({ count : this.state.count + 1});  // count 바로 쓰는거 별로 않좋다고 하는데 왜 그런지는 
-    this.setState( current => ({ count : this.state.count + 1}) );  
-    console.log("add");
-  } 
-  minus = ()=> {
-    this.state( current => ({count : this.state.count - 1}) );
-    console.log("minus");
-  }
+  getMoiveFetch(){
+    fetch("https://yts-proxy.nomadcoders1.now.sh/list_movies.json")
+      .then( (response) => response.json() )
+      .then( (json) => console.log(json));
+    ;
+  };
+  componentDidMount(){
+    this.getMoiveFetch();
+  };
   // state 사용 {this.state.count}
   render(){
     return ( 
       <div>
-        <h1>I am class {this.state.count}</h1>
-        <button onClick={this.add} > Add </button>
-        <button onClick={this.minus} > Minus </button>
+        {this.state.isLoading ? "Loading..." : "We are ready"}
       </div>
     );
-  }
+  };
 }
 
 export default App;

@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/hyungjun-tech01.github.io/movie_app/static/js/main.4d2797bf.js",
-    "index.html": "/hyungjun-tech01.github.io/movie_app/index.html",
-    "main.4d2797bf.js.map": "/hyungjun-tech01.github.io/movie_app/static/js/main.4d2797bf.js.map"
+    "main.js": "/movie_app/static/js/main.4d2797bf.js",
+    "index.html": "/movie_app/index.html",
+    "main.4d2797bf.js.map": "/movie_app/static/js/main.4d2797bf.js.map"
   },
   "entrypoints": [
     "static/js/main.4d2797bf.js"

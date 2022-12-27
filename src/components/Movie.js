@@ -4,14 +4,14 @@ import PropTypes from "prop-types";
 function Movie({id, title, year, summary, poster, genres}){
     return (
 
-        <div class="movie">
+        <div className="movie">
             <img src={poster} alt={title} title={title}/>
             <div className="moive_data">
                 <h3 className="movie__title"> {title} </h3>
                 <h5 className="movie__year"> {year} </h5>
                 <p className="movie_summary"> {summary.slice(0,140)}... </p>
                 <ul className="genres">
-                    {genres.map(genre=>(<li className="genres__genre">{genre}</li>))}
+                    {genres.map((genre,index)=>(<li key={index} className="genres__genre">{genre}</li>))}
                 </ul>
             </div>
         </div>

@@ -1,9 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
+import {Link} from "react-router-dom";
 
 function Movie({id, title, year, summary, poster, genres}){
     return (
-
+    <Link to={{
+        pathname:"/movie_detail",
+        state:{
+            summary
+        }
+    }}>
         <div className="movie">
             <img src={poster} alt={title} title={title}/>
             <div className="moive_data">
@@ -15,6 +21,7 @@ function Movie({id, title, year, summary, poster, genres}){
                 </ul>
             </div>
         </div>
+    </Link>
     );
 }
 Movie.propTypes = {

@@ -8,6 +8,7 @@ import About from "./routes/About";
 import Home from "./routes/Home";
 import Detail from "./routes/Detail";
 
+// react-router-dom 6 버전 사용 , createBrowserRouter , RouterProvider 사용
 const router = createBrowserRouter([
   {
     path: "/",
@@ -20,7 +21,7 @@ const router = createBrowserRouter([
   {
     path: "movie_detail",
     element: <Detail />,
-},  
+  },  
 ]);
 
 

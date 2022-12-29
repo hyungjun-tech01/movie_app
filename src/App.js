@@ -7,6 +7,7 @@ import {
 import About from "./routes/About";
 import Home from "./routes/Home";
 import Detail from "./routes/Detail";
+import Navigator from "./routes/Navigator";
 
 // react-router-dom 6 버전 사용 , createBrowserRouter , RouterProvider 사용
 const router = createBrowserRouter([
@@ -27,7 +28,10 @@ const router = createBrowserRouter([
 
 function App(){
   return( 
-    <RouterProvider router={router} />
+    <div>
+      <Navigator />
+      <RouterProvider router={router} />
+    </div>
   );
 }
 export default App;
